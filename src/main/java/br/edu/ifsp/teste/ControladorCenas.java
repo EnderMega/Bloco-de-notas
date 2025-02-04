@@ -36,11 +36,18 @@ public class ControladorCenas
 
     public void irNota(ActionEvent event) throws IOException 
     {
-        root = FXMLLoader.load(getClass().getResource("note-view.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("note-view.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Criar novo Grupo");
+            stage.setScene(new Scene(loader.load()));
+    
+            stage.setResizable(false); 
+    
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void irMenu(ActionEvent event) throws IOException 

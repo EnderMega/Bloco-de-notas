@@ -5,8 +5,14 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+
 public class Arquivos
 {
+	@FXML
+	private Button nomeDaPasta;
+
 	public void CriarArq(String nome, String texto) throws Exception
 	{
 		File arquivo = new File(nome + ".txt");
@@ -48,6 +54,6 @@ public class Arquivos
 
     public void CriarPasta(String pasta)
     {
-        new File("/path/directory").mkdirs();
-    }
+        new File(nomeDaPasta.getText()).mkdirs();
+	}
 }
