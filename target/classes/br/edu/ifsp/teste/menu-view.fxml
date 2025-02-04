@@ -1,62 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Accordion?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.teste.ControladorCenas">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.teste.ControladorCenas">
    <children>
+      <ScrollBar layoutX="279.0" layoutY="126.0" orientation="VERTICAL" />
       <Button layoutX="190.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Abrir anotação" />
       <Button mnemonicParsing="false" onAction="#irNota" text="Nova anotação" />
-      <Text layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo!">
+      <Text layoutX="96.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo!">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Text layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aqui estão os seus grupos" />
-      <Accordion layoutY="90.0">
-        <panes>
-          <TitledPane animated="false" text="Trabalho">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="202.0" text="Anotação 1" />
-                        <Button layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="202.0" text="Anotação 2" />
-                        <Button layoutY="51.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="202.0" text="Anotação 3" />
-                        <Button layoutX="-1.0" layoutY="74.0" mnemonicParsing="false" onAction="#irNota" prefHeight="25.0" prefWidth="202.0" text="+ Nova Anotação" />
-                     </children>
-                  </AnchorPane>
-            </content>
-          </TitledPane>
-            <TitledPane animated="false" text="Estudos">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="202.0" text="Anotação 1" />
-                        <Button layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="202.0" text="Anotação 2" />
-                        <Button layoutY="76.0" mnemonicParsing="false" onAction="#irNota" prefHeight="25.0" prefWidth="202.0" text="+ Nova Anotação" />
-                        <Button layoutY="51.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="202.0" text="Anotação 3" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </TitledPane>
-            <TitledPane animated="false" text="Coisas">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="202.0" text="Anotação 1" />
-                        <Button layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="202.0" text="Anotação 2" />
-                        <Button layoutY="51.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="202.0" text="Anotação 3" />
-                        <Button layoutY="74.0" mnemonicParsing="false" onAction="#irNota" prefHeight="25.0" prefWidth="202.0" text="+ Nova Anotação" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </TitledPane>
-        </panes>
-      </Accordion>
+      <Text layoutX="81.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aqui estão os seus grupos" />
       <Button layoutX="96.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Novo Grupo" />
+      <AnchorPane layoutX="50.0" layoutY="86.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Accordion layoutX="1.0" layoutY="14.0" prefHeight="146.0" prefWidth="200.0">
+               <panes>
+                  <TitledPane animated="false" text="Coisas" />
+                <TitledPane animated="false" text="Trabalho" />
+                  <TitledPane animated="false" text="Estudos" />
+               </panes>
+            </Accordion>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

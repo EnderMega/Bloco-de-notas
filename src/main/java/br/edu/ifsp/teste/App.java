@@ -16,6 +16,7 @@ public class App extends Application {
             Scene scene = new Scene(root);
             stage.setTitle("noteBlock");
             stage.setScene(scene);
+            stage.resizableProperty().setValue(Boolean.FALSE);
             stage.show();
 
         } catch(Exception e) {
