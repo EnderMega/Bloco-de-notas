@@ -15,10 +15,24 @@ import javafx.stage.Stage;
 
 public class ControladorCenas
 {
-
     private Stage stage;
     private Scene scene;
     private Parent root;
+
+    public void novoGrupo(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("folder-create.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Criar novo Grupo");
+            stage.setScene(new Scene(loader.load()));
+    
+            stage.setResizable(false); 
+    
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public void irNota(ActionEvent event) throws IOException 
     {
