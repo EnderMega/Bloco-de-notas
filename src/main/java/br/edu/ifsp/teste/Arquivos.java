@@ -46,8 +46,8 @@ public class Arquivos
 		}
 	}
 
-    public void CriarPasta(String)
+    public void CriarPasta(String pasta)
     {
-        File pasta = new File("/path/directory").mkdirs();
+        new File("/path/directory").mkdirs();
     }
 }
