@@ -4,28 +4,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.teste.ControladorCenas">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.teste.ControladorCenas">
    <children>
-      <ScrollBar layoutX="279.0" layoutY="126.0" orientation="VERTICAL" />
-      <Button layoutX="190.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Abrir anotação" />
-      <Button mnemonicParsing="false" onAction="#irNota" text="Nova anotação" />
-      <Text layoutX="96.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo!">
+      <Button layoutX="125.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="125.0" text="Deletar Anotação" />
+      <Button mnemonicParsing="false" onAction="#irNota" prefHeight="10.0" prefWidth="125.0" text="Nova anotação" />
+      <Text layoutX="175.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo!">
          <font>
-            <Font size="22.0" />
+            <Font name="David Libre Regular" size="32.0" />
          </font>
       </Text>
-      <Text layoutX="81.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aqui estão os seus grupos" />
-      <Button layoutX="96.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Novo Grupo" />
-      <AnchorPane layoutX="50.0" layoutY="86.0" prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <Accordion layoutX="1.0" layoutY="14.0" prefHeight="146.0" prefWidth="200.0">
-               <panes>
-                  <TitledPane animated="false" text="Coisas" />
-                <TitledPane animated="false" text="Trabalho" />
-                  <TitledPane animated="false" text="Estudos" />
-               </panes>
-            </Accordion>
-         </children>
-      </AnchorPane>
+      <Text layoutX="146.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aqui estão as suas anotações">
+         <font>
+            <Font name="David Libre Regular" size="18.0" />
+         </font></Text>
+      <Button layoutX="250.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="125.0" text="Novo Grupo" />
+      <Button layoutX="375.0" mnemonicParsing="false" prefWidth="125.0" text="Deletar Grupo" />
+      <ScrollPane hbarPolicy="NEVER" layoutY="100.0" prefHeight="400.0" prefWidth="500.0">
+         <content>
+            <TreeView fx:id="treeView" prefHeight="400.0" prefWidth="500.0" />
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

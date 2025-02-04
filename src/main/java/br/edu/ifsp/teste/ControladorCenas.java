@@ -1,12 +1,16 @@
 package br.edu.ifsp.teste;
 
+import java.io.File;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeView;
 import javafx.stage.Stage;
 
 public class ControladorCenas
@@ -32,5 +36,31 @@ public class ControladorCenas
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    @FXML
+    private TreeView<String> treeView;
+
+    // This method loads files into the TreeView
+    public void initialize() {
+        File rootDirectory = new File("src/main/resources/notas"); // Specify your folder path here
+        TreeItem<String> rootItem = new TreeItem<>(rootDirectory.getName());
+        rootItem.setExpanded(true);  // Optionally expand the root item
+
+        loadFiles(rootDirectory, rootItem);
+
+        treeView.setRoot(rootItem);
+    }
+    // Recursively load files into the TreeView
+    private void loadFiles(File folder, TreeItem<String> parentItem) {
+        File[] files = folder.listFiles();
+        if (files != null) {
+            for (File file : files) {
+                TreeItem<String> fileItem = new TreeItem<>(file.getName());
+                parentItem.getChildren().add(fileItem);
+                if (file.isDirectory()) {
+                    loadFiles(file, fileItem);  // Recurse if directory
+                }
+            }
+        }
     }
 }
