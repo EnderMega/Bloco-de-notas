@@ -190,14 +190,24 @@ public class ControladorCenas
 
 	@FXML
 	public void listarArquivosTxt() {
-		File pastaAtual = new File("."); // Diretório atual
+		File pastaAtual = new File(".");
 		File[] arquivos = pastaAtual.listFiles((dir, name) -> name.toLowerCase().endsWith(".txt"));
 
-		if (arquivos != null) {
+		if (arquivos != null)
+		{
 			List<String> nomesArquivos = Arrays.stream(arquivos)
 					.map(File::getName)
 					.collect(Collectors.toList());
 
+			for (int i = 0; i < nomesArquivos.size(); i++)
+			{
+				String nome = nomesArquivos.get(i);
+				// nome.replace(".txt", "");
+				if (nome.length() > 4) {
+					nome = nome.substring(0, nome.length() - 4);
+				}
+				nomesArquivos.set(i, nome);
+			}
 			ObservableList<String> listaObservavel = FXCollections.observableArrayList(nomesArquivos);
 			listView.setItems(listaObservavel);
 		} else {

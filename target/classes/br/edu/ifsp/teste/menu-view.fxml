@@ -11,18 +11,18 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.teste.ControladorCenas">
    <children>
       <Button mnemonicParsing="false" onAction="#irNota" prefHeight="10.0" prefWidth="125.0" text="Nova anotação" />
-      <Text layoutX="175.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo!">
+      <Text layoutX="171.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo!">
          <font>
             <Font name="David Libre Regular" size="32.0" />
          </font>
       </Text>
-      <Text layoutX="146.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aqui estão as suas anotações">
+      <Text layoutX="38.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utilize a caixa de pesquisa para abrir suas anotações.">
          <font>
             <Font name="David Libre Regular" size="18.0" />
          </font></Text>
-      <ScrollPane hbarPolicy="NEVER" layoutY="100.0" prefHeight="400.0" prefWidth="500.0">
+      <ScrollPane hbarPolicy="NEVER" layoutY="100.0" prefHeight="410.0" prefWidth="500.0" AnchorPane.topAnchor="90.0">
          <content>
-            <ListView fx:id="listView" prefHeight="398.0" prefWidth="498.0" />
+            <ListView fx:id="listView" prefHeight="408.0" prefWidth="498.0" />
          </content></ScrollPane>
       <Button layoutX="125.0" mnemonicParsing="false" onAction="#LerArq" prefHeight="25.0" prefWidth="125.0" text="Abrir nota" />
       <TextField fx:id="abrirArquivo" layoutX="288.0" prefHeight="25.0" prefWidth="212.0" promptText="Nome arquivo" />
