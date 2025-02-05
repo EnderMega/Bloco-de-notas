@@ -53,6 +53,7 @@ public class ControladorCenas
 	@FXML
     private TextArea textoId;
 
+	@FXML
 	public void CriarArq(ActionEvent event) throws Exception
 	{
 		File arquivo = new File(pasta.getText() + ".txt");
@@ -79,7 +80,7 @@ public class ControladorCenas
 	}
 
 	@FXML
-	public TextField abrirArquivo;
+	private TextField abrirArquivo;
 
 	@FXML
 	public void LerArq(ActionEvent event) throws Exception
@@ -89,14 +90,16 @@ public class ControladorCenas
 				return;
 				
 			Path path = Paths.get(abrirArquivo.getText() + ".txt");
-            String content = Files.readString(path);
-            System.out.println(content);
+            String arquivo = Files.readString(path);
+            System.out.println(arquivo);
 			
-			// Parent root = (Parent)FXMLLoader.load(this.getClass().getResource("note-view.fxml"));
-			// this.stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-			// this.scene = new Scene(root);
-			// this.stage.setScene(this.scene);
-			// this.stage.show();
+			Parent root = (Parent)FXMLLoader.load(this.getClass().getResource("note-view.fxml"));
+			this.stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+			this.scene = new Scene(root);
+			this.stage.setScene(this.scene);
+			this.stage.show();
+			
+			textoId.setText(arquivo);
 		}
 		catch (IOException e)
 		{
