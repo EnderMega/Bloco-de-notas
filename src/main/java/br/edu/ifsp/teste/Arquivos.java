@@ -53,10 +53,4 @@ public class Arquivos
 			e.printStackTrace();
 		}
 	}
-
-    public void CriarPasta(String pasta)
-    {
-        new File(nomeDaPasta.getText()).mkdirs();
-
-	}
 }
