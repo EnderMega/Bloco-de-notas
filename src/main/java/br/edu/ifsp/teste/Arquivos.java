@@ -27,6 +27,7 @@ public class Arquivos
 				FileWriter aaa = new FileWriter("nome" + ".txt");
 				aaa.write("texto");
 				aaa.close();
+				System.out.println("Arquivo criado: " + arquivo.getName());
 			}
 			else
 			{
