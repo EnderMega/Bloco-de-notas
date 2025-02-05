@@ -19,14 +19,14 @@ public class ControladorCenas
     private Scene scene;
     private Parent root;
 
-    public void novoGrupo(ActionEvent event) {
+    public void novoGrupo(ActionEvent event) throws Exception {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("folder-create.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Criar novo Grupo");
             stage.setScene(new Scene(loader.load()));
     
-            stage.setResizable(false); 
+            stage.setResizable(false);
     
             stage.show();
         } catch (Exception e) {
@@ -39,7 +39,7 @@ public class ControladorCenas
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("note-view.fxml"));
             Stage stage = new Stage();
-            stage.setTitle("Criar novo Grupo");
+            stage.setTitle("Nova nota");
             stage.setScene(new Scene(loader.load()));
     
             stage.setResizable(false); 
@@ -60,7 +60,7 @@ public class ControladorCenas
     }
     @FXML
     private TreeView<String> treeView;
-
+    /*
     // This method loads files into the TreeView
     public void initialize() {
         File rootDirectory = new File("src/main/resources/notas"); // Specify your folder path here
@@ -84,4 +84,5 @@ public class ControladorCenas
             }
         }
     }
+        */
 }

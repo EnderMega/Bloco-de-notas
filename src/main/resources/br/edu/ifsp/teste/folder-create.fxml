@@ -4,9 +4,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="128.0" prefWidth="298.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="128.0" prefWidth="298.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.teste.ControladorCenas">
    <children>
       <TextField fx:id="nomeDaPasta" alignment="CENTER" layoutX="32.0" layoutY="37.0" prefHeight="25.0" prefWidth="234.0" promptText="Insira o nome do grupo" />
-      <Button fx:id="buttonCriarPasta" layoutX="123.0" layoutY="79.0" mnemonicParsing="false" onAction="#CriarPasta" text="Salvar" />
+      <Button fx:id="buttonCriarPasta" layoutX="123.0" layoutY="79.0" mnemonicParsing="false" text="Salvar" />
    </children>
 </Pane>

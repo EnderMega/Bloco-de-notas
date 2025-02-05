@@ -1,9 +1,11 @@
 package br.edu.ifsp.teste;
 
 import java.io.IOException;
+import java.nio.file.Files;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
+import java.nio.file.Path;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -42,8 +44,7 @@ public class Arquivos
 	public void LerArq(String nome, String texto) throws Exception
 	{
 		try {
-			File arquivo = new File(nome + ".txt");
-			texto = new Scanner(new File("filename")).useDelimiter("\\Z").next();
+			texto = Files.readString((Path.of(nome + ".txt")));
 		}
 		catch (IOException e)
 		{
@@ -55,5 +56,6 @@ public class Arquivos
     public void CriarPasta(String pasta)
     {
         new File(nomeDaPasta.getText()).mkdirs();
+
 	}
 }
