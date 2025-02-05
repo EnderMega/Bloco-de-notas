@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.teste.ControladorCenas">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.teste.ControladorCenas">
    <children>
       <AnchorPane prefHeight="25.0" prefWidth="300.0">
          <children>
             <Button mnemonicParsing="false" onAction="#irMenu" prefWidth="125.0" text="Pagina Inicial" />
-            <TextField layoutX="300.0" prefHeight="25.0" prefWidth="200.0" />
-            <Button layoutX="125.0" mnemonicParsing="false" prefWidth="125.0" text="Salvar" />
+            <TextField fx:id="pasta" layoutX="300.0" prefHeight="25.0" prefWidth="200.0" />
+            <Button layoutX="125.0" mnemonicParsing="false" onAction="#CriarArq" prefWidth="125.0" text="Salvar" />
          </children>
       </AnchorPane>
-      <TextArea prefHeight="300.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+      <TextArea fx:id="textoId" prefHeight="300.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
    </children>
 </VBox>

@@ -1,7 +1,9 @@
 package br.edu.ifsp.teste;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.annotation.Target;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +11,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.stage.Stage;
@@ -36,4 +41,35 @@ public class ControladorCenas
         stage.setScene(scene);
         stage.show();
     }
+
+	@FXML
+    private TextField pasta;
+
+	@FXML
+    private TextArea textoId;
+
+	public void CriarArq(ActionEvent event) /*throws Exception*/
+	{
+		File arquivo = new File(pasta.getText() + ".txt");
+		try {
+			if (arquivo.createNewFile())
+			{
+				System.out.println("Arquivo criado: " + arquivo.getName());
+
+				FileWriter aaa = new FileWriter(pasta.getText() + ".txt");
+				aaa.write(textoId.getText());
+				aaa.close();
+			}
+			else
+			{
+				//TODO: aaa
+				System.out.println("Arquivo já existe, imbecíl >:(");
+			}
+		}
+		catch (IOException e)
+		{
+			System.out.println("Ocorreu um erro, desculpa :(");
+			e.printStackTrace();
+		}
+	}
 }

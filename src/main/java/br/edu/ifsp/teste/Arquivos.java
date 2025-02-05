@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.util.Scanner;
 import java.nio.file.Path;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
@@ -15,16 +16,16 @@ public class Arquivos
 	@FXML
 	private Button nomeDaPasta;
 
-	public void CriarArq(String nome, String texto) throws Exception
+	public void CriarArq(ActionEvent event) throws Exception
 	{
-		File arquivo = new File(nome + ".txt");
+		File arquivo = new File("nome" + ".txt");
 		try {
 			if (arquivo.createNewFile())
 			{
 				System.out.println("Arquivo criado: " + arquivo.getName());
 
-				FileWriter aaa = new FileWriter(nome + ".txt");
-				aaa.write(texto);
+				FileWriter aaa = new FileWriter("nome" + ".txt");
+				aaa.write("texto");
 				aaa.close();
 			}
 			else
@@ -38,7 +39,6 @@ public class Arquivos
 			System.out.println("Ocorreu um erro, desculpa :(");
 			e.printStackTrace();
 		}
-
 	}
 
 	public void LerArq(String nome, String texto) throws Exception
