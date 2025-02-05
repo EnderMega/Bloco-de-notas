@@ -7,12 +7,9 @@
    <children>
       <AnchorPane prefHeight="25.0" prefWidth="300.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#irMenu" text="Pagina Inicial" />
+            <Button mnemonicParsing="false" onAction="#irMenu" prefWidth="125.0" text="Pagina Inicial" />
             <TextField layoutX="300.0" prefHeight="25.0" prefWidth="200.0" />
-          <TitledPane animated="false" layoutX="159.0" prefHeight="0.0" prefWidth="141.0" text="Adicionar ao Grupo">
-               <content>
-                  <Button mnemonicParsing="false" text="Button" />
-               </content></TitledPane>
+            <Button layoutX="125.0" mnemonicParsing="false" prefWidth="125.0" text="Salvar" />
          </children>
       </AnchorPane>
       <TextArea prefHeight="300.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
