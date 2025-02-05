@@ -88,18 +88,21 @@ public class ControladorCenas
 		try {
 			if (abrirArquivo.getText() == null)
 				return;
-				
+	
 			Path path = Paths.get(abrirArquivo.getText() + ".txt");
-            String arquivo = Files.readString(path);
-            System.out.println(arquivo);
-			
-			Parent root = (Parent)FXMLLoader.load(this.getClass().getResource("note-view.fxml"));
+			String arquivo = Files.readString(path);
+			System.out.println(arquivo);
+	
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("note-view.fxml"));
+			Parent root = loader.load();
+	
+			ControladorCenas novoControlador = loader.getController();
+			novoControlador.textoId.setText(arquivo);
+	
 			this.stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			this.scene = new Scene(root);
 			this.stage.setScene(this.scene);
 			this.stage.show();
-			
-			textoId.setText(arquivo);
 		}
 		catch (IOException e)
 		{
@@ -107,4 +110,31 @@ public class ControladorCenas
 			e.printStackTrace();
 		}
 	}
+	
+
+	// @FXML
+	// public void LerArq(ActionEvent event) throws Exception
+	// {
+	// 	try {
+	// 		if (abrirArquivo.getText() == null)
+	// 			return;
+				
+	// 		Path path = Paths.get(abrirArquivo.getText() + ".txt");
+    //         String arquivo = Files.readString(path);
+    //         System.out.println(arquivo);
+	// 		Parent root = (Parent)FXMLLoader.load(this.getClass().getResource("note-view.fxml"));
+
+	// 		this.stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	// 		this.scene = new Scene(root);
+	// 		this.stage.setScene(this.scene);
+	// 		this.stage.show();
+			
+	// 		textoId.setText(arquivo);
+	// 	}
+	// 	catch (IOException e)
+	// 	{
+	// 		System.out.println("Ocorreu um erro, desculpa :(");
+	// 		e.printStackTrace();
+	// 	}
+	// }
 }

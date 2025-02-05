@@ -21,6 +21,6 @@
          </font></Text>
       <ScrollPane hbarPolicy="NEVER" layoutY="100.0" prefHeight="400.0" prefWidth="500.0" />
       <Button layoutX="125.0" mnemonicParsing="false" onAction="#LerArq" prefHeight="25.0" prefWidth="125.0" text="Abrir nota" />
-      <TextField fx:id="abrirArquivo" layoutX="288.0" prefHeight="25.0" prefWidth="212.0" promptText="Nome arquivo" />
+      <TextField fx:id="abrirArquivo" layoutX="288.0" prefHeight="25.0" prefWidth="212.0" promptText="Nome arquivo" text="ola" />
    </children>
 </AnchorPane>
